@@ -1,0 +1,28 @@
+.containerDescription {
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    background-color: #f0f5f3;
+}
+
+.containerDescription h6 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #2e2828;
+}
+
+.description {
+    width: 60%;
+}
+
+.containerDescription p {
+    font-weight: 500;
+    color: #2e2828;
+    text-align: justify;
+}
+
+@media (max-width:768px) {
+    .description {
+        width: 100%;
+    }
+}

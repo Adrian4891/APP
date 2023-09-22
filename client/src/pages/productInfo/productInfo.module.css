@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f5f3;
+    padding-top: 5px;
+}
+
+.containerDescription {
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+}
+
+@media (max-width:990px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

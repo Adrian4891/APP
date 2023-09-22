@@ -1,0 +1,105 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 40px 5px 0px 5px;
+    height: 78vh;
+    background-color: #f0f5f3;
+}
+
+.containerFormAndMessages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    gap: 30px;
+}
+
+.boxsMessages {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.userMessage, .admMessage {
+    width: 100%;
+    background-color: #ffff;
+    border: 1px solid #999999;
+    padding: 5px 15px;
+    border-radius: 20px 20px 20px 0px;
+    font-weight: 500;
+    color:#535252
+}
+
+.userMessage {
+    border-radius: 20px 20px 20px 0px; 
+}
+
+.admMessage {
+    border-radius: 20px 0px 20px 20px;
+}
+
+.boxsMessages button {
+    border-radius: 10px;
+    background-color: #ffff;
+    border: 2px solid #000000;
+    background-color: #000000;
+    color: #ffff;
+    font-weight: 500;
+}
+
+.boxsMessages button:hover {
+   border-radius: 10px;
+   background-color: #ffff;
+   color: #000000;
+}
+
+.formQuestionRes {
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0px;
+    background-color: #ffff;
+}
+
+.formNone {
+    display: none;
+}
+
+.formQuestionRes textarea {
+    width: 90%;
+    height: 90px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    color:#3f3e3e
+}
+
+.formQuestionRes label {
+    width: 90%;
+    font-weight: 500;
+    color:#3f3e3e
+}
+
+.formQuestionRes button {
+    width: 40%;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #000000;
+    border:none;
+    padding: 5px;
+    color:#ffff;
+    font-weight: 500;
+}
+
+.formQuestionRes button:hover {
+    background-color: #181717;
+}

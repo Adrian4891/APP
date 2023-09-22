@@ -1,0 +1,50 @@
+.container {
+    background-color: #f6f7fa;
+    padding-top: 20px;
+}
+
+.productsTitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 280px;
+    padding-bottom: 12px;
+}
+
+.productsTitle h3 {
+    margin:  0px;
+    color: #383838;
+    padding-bottom: 5px;
+}
+
+.productsTitle a {
+    text-decoration: none;
+}
+
+.contPag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    gap: 7px;
+}
+
+.contPag p {
+   margin:0px;
+   color: #4da6fa;
+   font-weight: 500;
+}
+
+.contPag a {
+    text-decoration: none;
+    padding: 0px 5px;
+}
+
+@media (max-width:425px){
+    .productsTitle h3{
+       font-size: 20px;
+       padding: 0px;
+    }
+}
+
+

@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 80px;
+    background-color: #a7a5a5;
+    flex-direction: column;
+}
+
+.container img {
+    width: 130px;
+    padding-top: 20px;
+}
+
+.contIcon {
+    display: flex; 
+    margin: 0px;
+}
+.contIcon a {
+   padding: 5px 20px;
+   font-size: 20px; 
+   margin: 0px;
+   color: #000000;
+}

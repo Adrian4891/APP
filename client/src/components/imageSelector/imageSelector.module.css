@@ -1,0 +1,89 @@
+.container {
+    width: 50%;
+    height: 510px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background:#ffff;
+    border-radius: 5px;
+}
+
+.containerImagesSelect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 0px 15px;
+}
+
+.cardSelect {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background-color: #ffff;
+}
+
+.containerImagesSelect img{
+    width: 90px;
+    height: 100px;
+    object-fit:contain;
+}
+
+.imageSelect {
+    width: 89%;
+    height: 450px;
+    object-fit: contain; 
+    cursor: zoom-in;
+}
+
+.containerImage {
+    width: 100%;
+}
+
+@media (max-width:990px) {
+    .container {
+        width: 95%;
+        height: 50%;
+        border-radius: 0%;
+    } 
+    .containerImagesSelect {
+        background-color: #ffff;
+    }
+    .cardSelect {
+        border: none;
+        box-shadow: none;
+    }
+    .containerImagesSelect img{
+        width: 60%;
+      
+    }
+}
+
+@media (max-width:425px) {
+    .container {
+       flex-direction: column;
+    }
+   
+    .containerImagesSelect {
+       flex-direction: row;
+       width: 90%;
+       gap: 6px;
+    }
+
+    .cardSelect {
+        width:70px;
+    }
+
+    .imageSelect {
+        width: 90%;
+        height: 250px;
+    }
+}
+

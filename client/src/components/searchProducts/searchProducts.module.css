@@ -1,0 +1,42 @@
+.container {
+    background-color: #f6f7fa;
+    padding-top: 10px;
+    min-height: 80vh;
+}
+
+.containerSearch {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px ;
+}
+
+.notResult {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 85vh;
+    background-color: #f6f7fa;
+}
+
+.notResult h4 {
+    font-size: 35px ;
+    color: #b0b0b3;
+}
+
+.iconSearch {
+    font-size: 50px ;
+    color: #b0b0b3;
+}
+
+@media (max-width:575px) {
+
+    .notResult h4, .iconSearch{
+        font-size:35px ;
+        color: #b0b0b3;
+        margin-left: 2px;
+    }
+}

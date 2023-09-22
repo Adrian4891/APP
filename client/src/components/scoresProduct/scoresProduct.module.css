@@ -1,0 +1,150 @@
+.container {
+  background-color: #f6f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.containerScores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  height: 84vh;
+  padding-top: 15px;
+  gap: 5px;
+  border: 1px solid #b4b3b3;
+  background-color: #fffc;
+  border-radius: 5px; 
+}
+
+.containerScores h3 {
+  font-size: 25px;
+  color: #535252;
+}
+
+.containerScores img {
+  width: 100px;
+  height: 120px;
+  border-radius: 100px;
+  object-fit: contain;
+}
+
+.containerScores h6 {
+  color: #535252;
+}
+
+.containStars {
+  display: flex;
+  gap: 30px;
+}
+
+.containStars svg {
+  font-size: 25px;
+}
+
+.scoreRef  {
+  display: flex;
+  gap: 180px;
+}   
+
+.scoreRef p {
+  color: #919090;
+  font-weight: 500;
+}   
+
+.starlight {
+  color: #f3f716;
+  border: 1px #000000 ;
+}
+
+.starDark  {
+  color: #94948f;
+}   
+
+.rateForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 422px;
+}
+
+.rateForm textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding: 7px;
+}
+
+.rateForm label {
+  margin-bottom: 5px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #444343;
+}
+
+.rateForm button {
+  width: 60%;
+  border-radius: 5px;
+  background-color: #0000ff;
+  color: #ffff;
+  border: none;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.rateForm button:hover {
+  background-color: #2222fc;
+}
+
+.errorScore {
+  color: #dd0d0d;
+}
+
+@media (max-width:768px){
+  .container {
+    background-color: #fffc;
+  }
+  .containerScores {
+    width: 400px;
+    height: 84vh;  
+    padding: 5px;
+    background-color: #fffc;
+    border: none;
+  }
+  .containerScores img {
+    width:60px
+  }
+  
+  .containerScores h3 {
+    font-size: 18px;
+  }
+
+  .containerScores p {
+    font-size: 14px;
+  }
+
+  .rateForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 305px;
+  }
+
+  .rateForm textarea {
+    width: 96%;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 7px;
+  }
+
+  .rateForm label {
+    font-size: 15px;
+  }
+}

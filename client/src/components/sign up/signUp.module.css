@@ -1,0 +1,117 @@
+.containerSignUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#141212;
+    height: 100vh;
+}
+
+.containerForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    width: 325px;
+    background-color: #ffff;
+    border-radius: 5px;
+    gap: 15px;
+}
+
+.containerForm form {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 15px
+}
+
+.containerForm h1 {
+    margin-bottom: 30px;
+}
+
+.containerForm p {
+    margin: 0;
+    font-size: 13px;
+    padding:  0px 10px;
+    color: #ff0000;
+    font-weight: 500;
+    text-align: center;
+}
+
+.containerForm button {
+    padding: 3px 25px;
+    margin-top: 15px;
+}
+
+.containerForm p {
+    margin-top: 15px;
+}
+
+.containerForm a {
+    text-decoration: none;
+}
+
+.contInputs {
+    padding-left: 15px;
+}
+
+.contInputs input {
+    margin: 0px 10px;
+    padding: 4px 20px;
+    color: #1f1e1e;
+    font-weight: 500;
+    width: 210px;
+}
+
+.contButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;  
+}
+
+.contButton button {
+    background-color: #1a1919;
+    border: #1a1919 ;
+    padding: 3px 40px;
+    margin-top: 15px;
+    border-radius: 2px;
+    color: #ffff;
+    font-size: 17px;
+}
+
+.contButton button:hover {
+    background-color: #252424;
+    border: #504e4e ;
+    transition: 700ms;
+}
+
+.contButton p {
+    font-size: 15px;
+    color: black;
+    font-weight: 500;
+}
+
+.contButton a {
+    color: #1793e6;
+}
+
+.contButton a:hover {
+    color: #1dd3eb;
+    text-decoration: underline;
+}
+
+.iconsSingUp{
+    font-size: 20px;
+    color: #646161;
+}
+
+@media (max-width: 320px){
+    .containerForm {
+        width: 317px;
+    }
+
+}

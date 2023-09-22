@@ -1,0 +1,120 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f0f5f3;
+}
+
+.containerStarts {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.containerStarts svg  {
+    margin: 2px;
+    font-size: 17px;
+}
+
+.containerStarts p {
+    margin-bottom: 0px;
+}
+
+.containerStarts article {
+    padding-bottom: 5px;
+}
+
+.starOff {
+    color: #dbdbda;
+}
+
+.ligthStar {
+    color: #f3f716;
+}
+
+.starHiden {
+   display: none;
+}
+
+.container h6 {
+    color: #2b2a2a;
+    padding: 0px 0px;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.containerComents {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.containerComents h6 {
+    margin-top: 20px;
+}
+
+.coments {
+    width: 60%;
+    border: 1px solid #c0bebe;
+    background-color: #ffff;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    color: #555353;
+    position: relative;
+}
+
+.starsComents {
+    position: absolute;
+    right: 2%;
+    top: 1%;
+}
+
+.starsComents svg {
+    margin:5px;
+    font-size: 14px;
+}
+
+.coments p{
+    margin-bottom: 5px;
+}
+
+.emptyQuestions  {
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+    gap: 5px;
+}
+
+.emptyQuestions  h6 {
+    color: #2b2a2a;
+    margin-bottom: 0px;
+}
+
+.emptyQuestions .starOff  {
+   margin-left: 10px;
+   font-size: 18px;
+   color: #d4d2d2;
+}
+
+@media (max-width:768px){
+    .coments {
+        width: 100%;
+    }
+}
+
+@media (max-width:425px){
+    .emptyQuestions  h6 {
+        font-size: 15px;
+    }
+    
+    .emptyQuestions {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .containerStarts {
+        flex-direction: column;
+        align-items: start;
+    }
+}

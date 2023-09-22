@@ -1,0 +1,165 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f3f1;
+    padding: 10px;
+    height:100vh;
+}
+
+.container form {
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid #a1a0a0;
+    padding:20px;
+    border-radius:5px;
+}
+
+.containData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.containData input {
+    padding: 3px 0px 3px 10px;
+    border: 1px solid #a09f9f;
+    border-radius: 5px;
+}
+
+.contLabInp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contLabInp input {
+    width: 220px;
+  
+}
+
+.contLabInp select {
+    width: 220px;
+    padding: 3px 0px 4px 10px;
+    border: 1px solid #a09f9f;
+    border-radius: 5px;
+}
+
+.contLabInp .number {
+    width: 120px;
+}
+
+.contLabInp .codArea {
+  width:120px;
+}
+
+.contLabInp .entreCalles {
+    width:460px; 
+}
+
+.container p {
+  margin: 0px;
+}
+
+.contButtons {
+    display: flex;
+    align-items: start;
+    width: 100%;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.contButtons button{
+    margin: 10px 0px;
+   width: 170px;
+   padding: 5px 5px;
+   background-color: #3030fc;
+   color: #ffff;
+   border: none;
+   border-radius:5px;
+   font-weight: 500;
+}
+
+.contButtons button:hover{
+    background-color: #3e3efd;
+}
+
+.messageError {
+    color: #f71d1d;
+    padding: 0px 10px;
+}
+
+@media (max-width:425px){
+
+    .containData label {
+        font-size: 12px;
+    }
+
+    .containData input {
+        font-size: 12px;
+        padding: 2px 0px 2px 10px;
+    }
+
+    .contLabInp input {
+        width: 140px; 
+    }
+
+    .contLabInp select {
+        width: 140px;
+        font-size: 12px;
+        padding: 2px 0px 2px 10px;
+    }
+    
+    .contLabInp .codArea  {
+      width:80px;
+    }
+
+    .contLabInp .number  {
+        width:80px;
+      }
+
+    .numberTelephone input {
+        padding: 0px;
+    }
+    
+    .contLabInp .entreCalles  {
+        width:300px;
+    }
+    
+    .messageError {
+        padding: 0px 5px;
+        font-size: 12px;
+    } 
+
+    .contButtons button{
+       margin: 10px 0px;
+       padding: 3px 2px;
+       font-size: 12px;
+       font-weight: 500;
+       width: 125px;
+    }
+
+    .contButtons {
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+}
+
+@media (max-width:375px){
+    .container {
+        background-color: #ffff;
+    }
+
+    .container form {
+        border: none;
+        padding:10px;
+    }
+}

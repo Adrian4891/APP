@@ -1,0 +1,161 @@
+.container {
+    height: 90vh;
+    width: 100%;
+    background-image: radial-gradient(ellipse farthest-corner 
+    at 45px 45px  , #100f13 50%,rgb(0, 0, 0)0%, #1b0691 50% 
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    font-family:Lucida Sans;
+}
+
+.titleProfile h2 {
+   color: #ffff;
+   font-weight: 700;
+   font-size: 35px;
+   font-family:Lucida Sans;
+}
+
+.titleProfile {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerInfoProfile {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color:#ffff;
+}
+
+.containerInfoProfile .infoContacto {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0px;
+}
+
+.containDataLocation {
+    display: flex;
+    width: max-content;
+    gap: 20px;
+}
+
+.containerInfoProfile h5 {
+    font-size: 27px;
+    text-shadow: 0.5px 0.5px #5c5b5a;
+}
+
+.containerInfoProfile h6 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.iconCard {
+    font-size: 120px;
+    color: #d6d5d4;
+}
+
+.info {
+    padding: 5px 20px 5px 0px ;
+}
+
+.containEditBtn {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 90%;
+    padding: 10px 0px;
+    height: 100%;
+}
+
+.buttEdit {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 2px solid #0808d4;
+    font-weight: 500;
+    color: #0808d4;
+    background-color: #ffffff;
+}
+
+.buttEdit:hover {
+    color: #ffff;
+    background-color: #161616;
+    border: 2px solid #161616;
+}
+
+.iconData {
+    margin: 0px 3px 3px 0px;
+    color: #ffff;
+
+}
+
+@media (max-width:450px){
+    .titleProfile h2 {
+        font-size: 28px;
+    }
+
+    .containerInfoProfile {
+        width: 95%;
+        height: 300px;
+        padding: 5px 0px 0 0;
+    }
+
+    .iconCard {
+        font-size: 100px;
+        color: #d6d5d4;
+    }
+    
+    .infoContacto{
+        gap: 5px;
+        padding: 10px 20px;
+    }
+
+    .containerInfoProfile h5 {
+        font-size: 20px;
+    }
+    
+    .containerInfoProfile h6 {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .buttEdit {
+        margin: 5px 0px 5px;
+        padding: 3px 5px;
+    }
+}
+
+@media (max-width:375px){
+    .containerInfoProfile {
+        width: 99%;
+        height: 270px;
+    }
+
+    .containDataLocation {
+        gap: 0px;
+    }
+
+    .info {
+        padding: 5px 10px 5px;
+    }
+
+    .containerInfoProfile .infoContacto {
+        gap:20px;
+        padding: 10px 0px 0px;
+    }
+
+    .buttEdit {
+        margin: -2px 0px 0px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,50 @@
+.searchBar .inputSearch {
+    width: 300px;
+    border: none;
+    box-shadow: 1px 1px #808080;
+    border-radius: 2px; 
+    margin-right: 7px;
+}
+
+.inputSearch {
+    padding-left: 7px;
+}
+
+.searchBar button {
+    border-radius: 2px;
+    border:none;
+    background-color:#cf2c2c;
+    color: #e9e4e4;
+    font-weight: 500;
+}
+
+.searchBar button:hover {
+    background-color: #f12222 ;
+    font-weight: 700;
+}
+
+@media (max-width:990px){
+    .searchBar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #dbd7d7;
+        padding:  5px 0px 10px 0px;
+
+    }
+
+}
+
+@media (max-width:425px){
+    .searchBar .inputSearch {
+        width: 230px;
+      
+    }
+}
+
+@media (max-width:325px){
+    .searchBar .inputSearch {
+        width: 180px;
+      
+    }
+}

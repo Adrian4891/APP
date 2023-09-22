@@ -1,0 +1,127 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #f5f2f2;
+}
+
+.profileForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: 450px;
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px 10px ;
+}
+
+.contLabInputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px 10px 10px;
+    width: 100%;
+}
+
+.contLabInputs input, label {
+    width: 95%;
+}
+
+.contLabInputs input {
+    border: 1px solid #b1afaf;
+    border-radius: 5px;
+}
+
+.contCityState {
+    width: 95%;
+}
+
+.contCityState  select {
+    width: 95%;
+    padding: 5px 0px;
+    border-radius: 5px;
+    border: 1px solid #b1afaf;    
+}
+
+.profileForm p {
+    padding: 0px 10px;
+    color: #ff0000;
+}
+
+.buttonsForm {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+.buttonsForm button {
+    width: 50%;
+    margin-top: 10px;
+    padding: 5px 0px;
+}
+
+.contButtComplete {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.contButtComplete button {
+    padding: 5px;
+    width: 40%;
+    background-color: #0000ff;
+    color: #ffff;
+    border: none;
+    border-radius: 3px;
+}
+
+.contButtComplete button:hover {
+    background-color: #2424fd;
+}
+
+.buttonSub {
+    background-color: #f7f7fc;
+    color: #0000ff;
+    border: 1px solid #0000ff;
+    border-radius: 2px ;
+    font-weight: 500;
+}
+
+.buttonSub:hover {
+    background-color: #2525fd;
+    color:  #f7f7fc;
+}
+
+.buttonCancel {
+    border: 1px solid #0000ff;
+    color: #f7f7fc;
+    background-color: #0000ff;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+.buttonCancel:hover {
+    background-color: #f7f7fc;
+    color: #0000ff;
+}
+
+.contLabInputs input {
+    padding: 5px 8px;     
+    font-size: 15px;
+}
+
+@media (max-width:425px) {
+    .container .profileForm{
+        width: 100%;
+        height: 100%;
+    }
+}

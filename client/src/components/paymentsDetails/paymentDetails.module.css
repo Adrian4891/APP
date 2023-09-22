@@ -1,0 +1,98 @@
+.container {
+    background-color: #f7f5f3;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 90vh;
+}
+
+.containerDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 500px;
+    background-color: #ffffff;
+    margin: 20px 0px;
+    border: 1px solid #b8afaf;
+    padding: 10px 0px;
+
+}
+
+.detailProduct {
+    width:50%;
+    color:#464545;
+}
+
+.cotainStatus, .detailsPay  {
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.cotainStatus h6 {
+    font-size: 20px;
+}
+
+.iconApproved {
+    color: #20962f;
+}
+
+.iconPending {
+    color: #e2cd0a;
+}
+
+.iconCancelled {
+    color: #e72727;
+}
+
+.cardDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    gap: 20px;
+}
+
+.cardDetails img  {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.detailsPay p {
+    font-weight: 600;
+    color: #333333;
+}
+
+.cardDetails p {
+    font-weight: 400;
+    color: #333333;
+}
+
+.detailsPay a {
+    text-decoration: none;
+}
+
+@media (max-width:500px) {
+    .containerDetails {
+        width: 95%;
+    }
+
+
+    .cardDetails {
+       display: block;
+       padding: 0px 0px 0px 20px;
+       width: 100%;
+    }
+
+    .detailProduct {
+        width: 100%;
+    }
+    .containerDetails {
+        justify-content: start;
+        align-items: center;
+    }
+    
+}
+

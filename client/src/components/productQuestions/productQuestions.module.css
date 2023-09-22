@@ -1,0 +1,199 @@
+.container {
+    padding: 20px  20px 30px  ;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 25px;
+    background-color: #f0f5f3;
+}
+
+.formQuestions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:start;
+    gap: 5px;
+    margin-top: 40px;
+    background-color: #f0f5f3;
+    width: 60%;
+}
+
+.formQuestions .inpQuestion {
+    width: 100%;
+    height: 90px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    background-color: #fdfdfd;
+    border: 1px solid #808080
+}
+
+.formQuestions button {
+    margin-top: 5px;
+    width: 120px;
+    border-radius: 5px;
+    background-color: #0a0af0;
+    padding: 2px 0px;
+    border: none;
+    color: #ffff;
+    font-weight: 500;
+}
+
+.formQuestions button:hover {
+    background-color: #1e1eff;
+}
+
+.formQuestions label {
+    color: #2b2a2a;
+    font-weight: 500;
+}
+
+.contQuestion {
+    width: 60%;
+    padding: 2px 0px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.questions {
+    border: 1px solid #c0bdbd;
+    border-radius: 10px;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: #ffff;
+    position: relative;
+    color: #646262;
+
+}
+
+.containRespon {
+    border: 1px solid #c0bdbd;
+    border-radius: 10px;
+    width: 95%;
+    margin-left: 5%;
+    padding: 5px 10px;
+    position: relative;
+    background-color: #ffff;
+}
+
+
+.containRespon p {
+    color: #646262;
+}
+.date {
+  position: absolute;
+  top: -18px;
+  right:20px;
+  padding: 2px;
+  font-size: 12px;
+}
+
+.btnHiden {
+    display: none;
+}
+
+.btnVisible {
+    display: inline;
+    border-radius: 7px;
+    margin-top: 10px;
+    color: #0a0af0;
+    border: 1px solid #0a0af0;
+    background-color: #ffff;
+    font-weight: 500;
+}
+
+.btnVisible:hover {
+    color: #ffff;
+    background-color: #0a0af0;
+    border: 1px solid #0a0af0;
+}
+
+.containFormRes {
+    height: 250px;
+    width: 100%;
+
+}
+
+.formResponse {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction:column;
+    height: 250px;
+}
+
+.formResponse textarea{ 
+    height: 150px;
+    width: 100%;
+   padding: 5px 10px
+}
+
+.containBtn button {
+    margin: 10px 20px 0px 0px ;
+    width: 120px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.btnDel{
+    background-color: #ff0000;
+    color: #fdfdfd;
+    border:none;
+    border-radius: 100%;
+    font-size: 8px;
+    position: absolute;
+    top: 4px;
+    right:10px;
+}
+
+.btnRes {
+    background-color: #2626e7;
+    border: 1px solid #2626e7;
+    color: #ffff;
+}
+
+.btnCancel {
+    background-color: #2a2a2c;
+    border: 1px solid #2a2a2c;
+    color: #ffff;
+}
+
+.btnRes:hover {
+    background-color: #2e2eff;
+}
+
+.btnCancel:hover {
+    background-color: #3a3a3b; 
+}
+
+.questionSelect {
+    width: 100%;
+    background-color: #ffff;
+    border: 1px solid #c0bdbd;
+    padding: 5px 10px;
+    border-radius: 20px 20px 0px 20px;
+}
+
+.limitQuestion {
+    font-size: 17px;
+    text-decoration: underline;
+    color: #02c4ff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+@media (max-width:768px) {
+    .formQuestions {
+        width: 100%;
+    }
+
+    .contQuestion {
+        width:95%;
+    }
+    
+}
+

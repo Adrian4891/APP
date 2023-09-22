@@ -1,0 +1,51 @@
+.container {
+    background-color: #f6f7fa;
+}
+
+.offerTitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 280px;
+    padding: 20px 0px 10px;
+}
+
+.offerTitle h3{
+   margin:  0px;
+   color: #383838;
+   padding-bottom: 5px;
+}
+
+.offerTitle a {
+    text-decoration: none;
+}
+
+.rowButtons {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 10px;  
+    gap: 20px;
+}
+
+.rowButtons p {
+    margin: 0px;
+    font-size: 16px;
+    color: #3a76f8;
+    font-weight: 500;
+}
+
+.rowButtons a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #6d6df1;
+}
+
+@media (max-width:425px){
+    .offerTitle h3{
+       font-size: 20px;
+       padding: 0px; 
+    }
+}
+
+

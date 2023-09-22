@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    height: 100vh; 
+}
+
+.loader img {
+    width: 300px;
+    padding-bottom: 20px;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.loader h2 {
+   color: #fc2323;
+}
+
+@media (max-width:768px){
+    .loader img {
+        width: 150px;
+    }
+}

@@ -1,0 +1,67 @@
+.containerFilter{
+    display: flex;
+    align-items: center;
+    align-content: start;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    width:95%; 
+}
+
+.containerSelect {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width:70%;
+    gap: 10px;
+}
+
+.filterTitle {
+    color: #494949;
+    margin-bottom: 0px;
+    text-decoration: underline;
+}
+
+.searchForm {
+    display: flex;
+    gap: 5px;
+}
+
+.searchForm input {
+    width: 90px;
+    border: 1px solid #afaeae;
+    border-radius: 5px;
+    text-align: center;
+    color: #494949;
+}
+
+.searchForm button {
+    padding: 0px 15px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    background-color: #2e2c2c;
+    color: #ffff;
+}
+
+.priceSelect {
+    padding: 1px 0px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid #afaeae;
+    color: #494949;
+    text-align: center;
+}
+
+@media (max-width:575px) {
+    .containerFilter {
+        flex-direction: column;
+        width: max-content;
+        justify-content: space-between;
+    }
+    .containerSelect {
+        justify-content: center;
+        padding: 0px 10px 10px 10px;
+        align-items: center;
+        width:100%;
+        gap:25px
+    }
+}

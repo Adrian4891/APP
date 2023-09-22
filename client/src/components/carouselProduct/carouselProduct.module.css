@@ -1,0 +1,64 @@
+.containerOverlayImg {
+    background-color: #8a8a88;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    opacity: 0.6;
+    z-index: 5;
+    width: 100%;
+}
+.containerCarousel {
+   width: 60%;
+   height: 95%;
+   position: fixed;
+   top:2%;
+   z-index: 6;
+   display: flex;
+   justify-content: center;
+   align-items:center;
+   flex-direction: column;
+   background-color: #ffff;
+}
+
+.containerCarousel p {
+    position: absolute;
+    left: 94%;
+    top: 8;
+    cursor:pointer;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.carouselImgs {
+    width: 90%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    justify-content: space-around;
+}
+.carouselImgs img{
+    height: 95%;
+    width: 80%;
+    object-fit:contain;
+}
+
+.containerCarousel .arrowIcon {
+    font-size: 40px;
+    cursor:pointer;
+}
+
+@media (max-width:425px){
+
+    .containerCarousel {
+        width: 100%;
+        height: 70%;
+        top:10%;
+    }
+  
+    .carouselImgs img{
+        height: 80%;
+        object-fit:contain;
+    }
+   
+}

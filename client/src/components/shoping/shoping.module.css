@@ -1,0 +1,90 @@
+.container {
+    background-color: #f7f5f2;
+    min-height: 80vh;
+}
+
+.containerShop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 25px 0px;
+}
+
+.cardsShop {
+    width: 80%;
+    padding: 10px ;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid #d3cece;
+    background-color: #ffffff;
+    box-shadow: 1px 2px #e4e1e1, 3px 4px #eeecec;
+    border-radius: 5px;
+}
+
+.imgShop {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.containerBtn {
+    display: flex;
+    gap: 10px;
+}
+
+.cardsShop button {
+    background-color: #5252da;
+    padding: 5px;
+    color: #ffffff;
+    border: none;
+    width: 150px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.cardsShop button:hover {
+    background-color: #5b5bfa;
+} 
+
+.cardsShop p {
+    font-size: 15px;
+    margin: 5px 0px;
+    font-weight:500;
+    color: #7e7c7c;
+}
+
+.cardsShop b {
+   color: #5ba0fa;
+}
+
+.emptyShoping {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.emptyShoping h3 {
+    font-size: 35px;
+    color: #bebbbb;
+}
+
+@media (max-width:768px) {
+    .cardsShop {
+        width: 95%;
+    }
+}
+
+@media (max-width:475px){
+    .emptyShoping h3 {
+        font-size: 19px;
+        color: #bebbbb;
+    }
+
+    .cardsShop button {
+        width: 140px;
+    }
+}

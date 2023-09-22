@@ -1,0 +1,141 @@
+
+.container{
+    min-height: 100vh;
+    padding: 20px 10px;    
+}
+
+.container p {
+    color: #706f6f;
+}
+
+.cardCart {
+    display: flex;  
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0px 10px 10px;
+    width: 190px;
+}
+
+.productInfo p {
+    margin-bottom: 5px;
+    color: #706f6f;
+
+}
+
+.imgCart {
+    width: 120px;
+    height: 100px;
+    object-fit: contain;
+    border: 1px solid #c4c3c3;
+    padding: 5px;
+}
+
+.quantity {
+    display: flex;
+    width: 48%;
+    justify-content: space-between;
+}
+
+.priceProperties, .subIvaTotal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: max-content;
+    padding: 10px 0px;
+}
+
+.containTotalPrice{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    border-top: 2px solid red;
+}
+
+.containBtnPay {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.containBtnPay button {
+    width: 220px;
+    border-radius: 15px;
+    border: 1px solid #d30e0e;
+    background-color: #ffff;
+    color:  #d30e0e;
+    font-weight: 500;
+}
+
+.containBtnPay button:hover {
+    background-color: #d30e0e;
+    color: #ffff;
+    transition: 700ms;
+}
+
+.notProducts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top:20px;
+}
+
+.notProducts h6 {
+    font-size: 35px;
+    color: #a6a6ad;
+    font-weight: 700;
+    opacity: 0.3;
+}
+
+.notProducts img {
+   width: 300px;
+   height: 400px;
+   object-fit: contain;
+   opacity: 0.3;
+}
+
+.selectQuant {
+    color: #706f6f;
+    border: 1px solid #6e6d6d;
+    border-radius: 5px;
+}
+
+@media (max-width:768px){
+    .cardCart{
+        flex-direction: column;
+        padding-left: 5px;
+    }
+
+    .notProducts h6 {
+        font-size: 30px;
+        color: #a6a6ad;    
+    }
+
+    .productInfo {
+        padding: 10px 0px;
+    }
+  
+    .quantity {
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        gap: 10px;
+        padding-right: 10px;
+    }
+
+    .containTotalPrice{
+        padding-left: 5px;
+    }
+
+    .subIvaTotal{
+        padding-right: 10px;  
+    }
+
+    .containBtnPay {
+        padding-right: 10px;
+    }
+}

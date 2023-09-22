@@ -1,0 +1,23 @@
+.containerSuccess {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #069e27;
+}
+
+.containerSuccess h2 {
+   color: #ffff;
+   padding: 0px 10px;
+}
+
+@media (max-width:375px) {
+    .containerSuccess h2 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+

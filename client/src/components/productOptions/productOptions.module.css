@@ -1,0 +1,143 @@
+.containerBuy {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    flex-direction: column;
+    gap: 1px;
+    width:45% ;
+    height: 600px;
+    padding-top:5px;
+}
+
+.containerBuy button {
+    width: 100px;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 17px;
+    font-weight: 460;
+}
+
+.addButt {
+   border: 1px solid #ff0505;
+   margin-right: 10px;
+   color: #ff0505;
+}
+
+.buyButt {
+    border: 1px solid #037c28;
+    margin-right: 10px;
+    color: #037c28;
+}
+
+.buyButt:hover {
+    background-color: #037c28;
+    color: #ffff;   
+}
+
+.addButt:hover {
+    background-color: #ff0505;
+    color: #ffff;   
+}
+
+.containerBuy h4 {
+    font-size: 22px;
+}
+
+.icon svg {
+    margin-right:10px ;
+    font-size: 20px;
+}
+
+.containerBuy .icon {
+    font-weight: 600;
+}
+
+/* tarjeta de credito */
+
+.containerCardBuy {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top:15px;
+    width: 330px;
+    height: 230px;
+    border-radius: 5px;
+    background-color: #d8e5f1;
+}
+
+.containerCardBuy .titleCard {
+    padding: 2px;
+    margin-left: 10px;
+}
+
+ul {
+    padding: 0;
+}
+
+ul li{
+    padding: 2px;
+    margin-left: 10px;
+    font-size: 15px;
+    color: #5e5b5b;
+    font-weight: 500;
+    list-style: none;
+}
+
+.titleCard {
+    font-size: 18px;
+    font-weight: 500;
+    margin:4px 4px 0px 10px ;
+}
+
+.containerCardBuy .iconCard{
+   font-size: 30px;
+   margin: 4px 4px 0px 10px;
+}
+
+.iconCard {
+    display: flex;
+    gap: 30px;
+}
+
+.visaCard {
+    color: #0f075a;
+}
+
+.masterCard {
+    color:#f73715;
+}
+
+.americanCard {
+    color:#096bec;
+}
+
+.containerDescription {
+    padding: 20px;
+    text-align: left;
+}
+
+@media (max-width:990px) {
+    .containerBuy {
+        width:95%;
+        padding-top: 30px;
+        height: 550px;
+    }
+    
+}
+
+@media (max-width:425px) {
+    .containerBuy {
+       padding: 10px;
+       
+    }
+    
+}
+
+@media (max-width:325px) {
+    .containerCardBuy {
+        width:98%;
+       
+    }
+    
+}
