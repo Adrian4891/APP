@@ -16,7 +16,7 @@ server.use(express.json());
 server.use(express.urlencoded({ extended : true }));
 
 server.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', 'https://barek-intruments-app.vercel.app/');
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header(
     'Access-Control-Allow-Headers',
