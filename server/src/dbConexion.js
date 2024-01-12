@@ -1,5 +1,5 @@
 require("dotenv").config();
-//const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME } = process.env;
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME } = process.env;
 const { Sequelize } = require("sequelize");
 const userModel = require("./models/User");
 const productModel = require("./models/Product");
@@ -13,40 +13,40 @@ const userQuestions  = require("./models/Questions");
 const scoreModel = require("./models/Scores");
 const notificationModel = require("./models/Notification");
 
-// const dataBase = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`, 
-// {logging:false, native: false, dialect: "postgres"});
+const dataBase = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`, 
+{logging:false, native: false, dialect: "postgres"});
 
-// dataBase.authenticate().then(()=>{
-//     console.log("DB, Connected");
-// }).catch((error)=>{
-//    console.log(error);
-// });
+dataBase.authenticate().then(()=>{
+    console.log("DB, Connected");
+}).catch((error)=>{
+   console.log(error);
+});
 
-// userModel(dataBase);
-// profileModel(dataBase);
-// productModel(dataBase);
-// favoriteModel(dataBase);
-// cartModel(dataBase);
-// paymentsModel(dataBase);
-// statesArg(dataBase);
-// citiesArg(dataBase);
-// userQuestions(dataBase);
-// scoreModel(dataBase);
-// notificationModel(dataBase);
+userModel(dataBase);
+profileModel(dataBase);
+productModel(dataBase);
+favoriteModel(dataBase);
+cartModel(dataBase);
+paymentsModel(dataBase);
+statesArg(dataBase);
+citiesArg(dataBase);
+userQuestions(dataBase);
+scoreModel(dataBase);
+notificationModel(dataBase);
 
 
-// const { User, Profile, Product, Favorites, Cart} = dataBase.models;
+const { User, Profile, Product, Favorites, Cart} = dataBase.models;
 
-// User.hasOne(Profile);
-// Profile.belongsTo(User);
+User.hasOne(Profile);
+Profile.belongsTo(User);
 
-// User.belongsToMany(Product, { through: Cart, as:"CartProduct"});
-// Product.belongsToMany(User, { through: Cart, as:"CartProduct"});
+User.belongsToMany(Product, { through: Cart, as:"CartProduct"});
+Product.belongsToMany(User, { through: Cart, as:"CartProduct"});
 
-// User.belongsToMany(Product, { through: Favorites, as: 'FavoriteProducts'});
-// Product.belongsToMany(User, { through: Favorites, as: 'LikedByUsers'});
+User.belongsToMany(Product, { through: Favorites, as: 'FavoriteProducts'});
+Product.belongsToMany(User, { through: Favorites, as: 'LikedByUsers'});
 
-// module.exports = {
-//     ...dataBase.models,
-//     dataBase
-// }
+module.exports = {
+    ...dataBase.models,
+    dataBase
+}
