@@ -32,8 +32,6 @@ const getCities = async (req, res) => {
     }
 }
 
-
-
 module.exports ={ 
     getStates, 
     getCities
