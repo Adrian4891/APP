@@ -1,6 +1,6 @@
-const mercadopago = require("mercadopago");
 require("dotenv").config();
-const { MERCADOPAGO_KEY, PORT } = process.env;
+const mercadopago = require("mercadopago");
+const MERCADOPAGO_KEY = process.env.MERCADOPAGO_KEY;
 const { Payment } = require("../dbConexion");
 const { Cart } = require("../dbConexion");
 
