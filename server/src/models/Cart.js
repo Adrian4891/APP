@@ -1,5 +1,6 @@
 const { DataTypes } = require("sequelize");
 
+
 module.exports = (dataBase) => {
     dataBase.define("Cart", {
         id:{
