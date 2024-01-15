@@ -76,10 +76,11 @@ const createPayment = async (req, res) =>{
             external_reference: "Reference_1234",    
         }
        const response = await payment.create(preference);
+       console(response)
        res.status(200).json(response.body.init_point);
         
     } catch (error) {
-        return res.status(404).send(error.message);
+        return res.status(404).send(error);
     }
 }
 
