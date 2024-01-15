@@ -37,7 +37,7 @@ const signUp = async (req, res) => {
          userName,
          email, 
          password: await bcryptjs.hash(password, 10)
-      }   
+      } ;  
       const userCreate = await User.create(userData);
       if(userCreate){
          let token = jwt.sign({id: userCreate.id}, process.env.secretKey,
@@ -46,7 +46,7 @@ const signUp = async (req, res) => {
          res.cookie(("jwt", token, {maxAge: 1 * 24 * 60 *1000, httpOnly: true }));
          createProfile(userCreate.id, email);
          return res.status(200).json(userCreate);
-      }
+      };
    } catch (error) {
       return res.status(404).send(error.message);
    }
