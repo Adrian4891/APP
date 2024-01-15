@@ -7,4 +7,4 @@ dataBase.sync({force: false}).then(()=>{
     server.listen(PORT, ()=>{
        console.log(`server in port ${PORT}`)
     });
-})
+});
