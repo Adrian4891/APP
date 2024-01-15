@@ -1,6 +1,5 @@
 const { States, Cities } = require("../dbConexion");
 
-
 const getStates  = async (req, res) => {
     try {
         const state = await States.findAll();
