@@ -12,6 +12,8 @@ const citiesArg = require("./models/Cities");
 const userQuestions  = require("./models/Questions");
 const scoreModel = require("./models/Scores");
 const notificationModel = require("./models/Notification");
+const url = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`;
+console.log(url)
 
 const dataBase = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`, 
 {logging:false, native: false, dialect: "postgres"});
