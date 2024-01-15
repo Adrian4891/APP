@@ -53,6 +53,7 @@ const signUp = async (req, res) => {
 }
 
 /* Function que autentica al usuario y devuelve los datos junto al token */
+
 const login = async (req, res) => {
    try {
       const { email, password } = req.body;
