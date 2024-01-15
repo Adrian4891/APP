@@ -30,7 +30,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { getUserRoll } from './redux/actions';
 import  axios from "axios";
 axios.defaults.baseURL='https://barekintrumentsapp-production.up.railway.app/';
-
 function App() {
 
   const [categories, setCategories] = useState([]);
