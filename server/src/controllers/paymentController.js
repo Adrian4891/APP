@@ -4,7 +4,7 @@ const MERCADOPAGO_KEY = process.env.MERCADOPAGO_KEY;
 const { Payment } = require("../dbConexion");
 const { Cart } = require("../dbConexion");
 
-//mercadopago.configure({access_token: MERCADOPAGO_KEY })
+mercadopago.configure({access_token: MERCADOPAGO_KEY })
 //createPayment, successRes, failResponse, pendingResponse, notificatePayment
 const createPayment = async (req, res) =>{
 
