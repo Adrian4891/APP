@@ -76,6 +76,7 @@ const login = async (req, res) => {
       if (!userFind) {
          throw { status: 401, message: "La cuenta no existe" };
       }
+      console.log(userFind)
 
       const isSame = await bcryptjs.compare(password, userFind.password);
       if (!isSame) {
@@ -88,13 +89,13 @@ const login = async (req, res) => {
 
       res.cookie("jwt", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpOnly: true });
 
-      const userData = {
-         userName: userFind.userName,
-         email: userFind.email,
-         id: userFind.id,
-      };
+      // const userData = {
+      //    userName: userFind.userName,
+      //    email: userFind.email,
+      //    id: userFind.id,
+      // };
 
-      return res.status(200).json(userData);
+      return res.status(200).json(userFind);
    } catch (error) {
       return res.status(error.status || 500).json({ error: error.message || "Error interno del servidor" });
    }
