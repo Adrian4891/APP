@@ -5,7 +5,6 @@ const { Payments } = require("../dbConexion");
 const { Cart } = require("../dbConexion");
 
 //mercadopago.configure({access_token: MERCADOPAGO_KEY })
-//createPayment, successRes, failResponse, pendingResponse, notificatePayment
 const client = new MercadoPagoConfig({ accessToken: MERCADOPAGO_KEY, options: { timeout: 5000, idempotencyKey: 'abc' } });
 const payment = new Payment(client);
 
