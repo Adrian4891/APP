@@ -2,6 +2,9 @@ const { User } = require("../dbConexion");
 const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { createProfile } = require("./profilesController");
+require("dotenv").config();
+const secretKey = process.env.secretKey;
+
 
 /* Function que verifica si el usuario o email existe */
 const saveUser = async (req, res, next) =>{
@@ -40,7 +43,7 @@ const signUp = async (req, res) => {
       }   
       const userCreate = await User.create(userData);
       if(userCreate){
-         let token = jwt.sign({id: userCreate.id}, process.env.secretKey,
+         let token = jwt.sign({id: userCreate.id}, secretKey,
             {expiresIn : 1* 24 * 60 * 60 * 1000}
          );
          res.cookie(("jwt", token, {maxAge: 1 * 24 * 60 *1000, httpOnly: true }));
@@ -65,7 +68,7 @@ const login = async (req, res) => {
       if(!userFind) throw Error("La cuenta no existe");
       const isSame = await bcryptjs.compare(password, userFind.password);
       if(!isSame) throw Error("Password incorrecto");
-      let token = jwt.sign({id: userFind.id}, process.env.secretKey, {
+      let token = jwt.sign({id: userFind.id}, secretKey, {
          expiresIn : 1* 24 * 60 * 60 * 1000,
       });
       const resToken = ("Token", token);
