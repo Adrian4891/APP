@@ -49,4 +49,4 @@ Product.belongsToMany(User, { through: Favorites, as: 'LikedByUsers'});
 module.exports = {
     ...dataBase.models,
     dataBase
-}
+};
