@@ -1,11 +1,16 @@
 require("dotenv").config();
-const mercadopago = require("mercadopago");
+//const mercadopago = require("mercadopago");
+const { MercadoPagoConfig, Payment } = require('mercadopago');
+
 const MERCADOPAGO_KEY = process.env.MERCADOPAGO_KEY;
-const { Payment } = require("../dbConexion");
+const { Payments } = require("../dbConexion");
 const { Cart } = require("../dbConexion");
 
-mercadopago.configure({access_token: MERCADOPAGO_KEY })
-//createPayment, successRes, failResponse, pendingResponse, notificatePayment
+
+const client = new MercadoPagoConfig({ accessToken: MERCADOPAGO_KEY , options: { timeout: 5000, idempotencyKey: 'abc' }});
+const payment = new Payment(client);
+
+//mercadopago.configure({access_token: MERCADOPAGO_KEY })
 const createPayment = async (req, res) =>{
 
     //http://localhost:3001/compras
@@ -75,7 +80,7 @@ const createPayment = async (req, res) =>{
             statement_descriptor: "BarekMusic",
             external_reference: "Reference_1234",    
         }
-       const response = await mercadopago.preferences.create(preference);
+       const response = await  payment.preferences.create(preference);
        res.status(200).json(response.body.init_point);
         
     } catch (error) {
@@ -115,7 +120,7 @@ const notificationPayment = async (req, res) => {
 
             const { id } = req.body.data;
             const userId = req.params.id;
-            const paymentsUser = await mercadopago.payment.findById(id);
+            const paymentsUser = await payment.findById(id);
             const items = paymentsUser.body.additional_info.items;
         
             items.forEach(async(item)=>{
@@ -135,7 +140,7 @@ const notificationPayment = async (req, res) => {
                     userId,
                     paymentId: id
                 }
-                await Payment.create(compra);
+                await Payments.create(compra);
             });
 
         return res.status(200).json(items);       
@@ -167,7 +172,7 @@ const findPayments = async(req, res) => { //"/payments/detail"
     try {
 
         const { id } = req.params;
-        const paymentsUser = await mercadopago.payment.findById(id);
+        const paymentsUser = await payment.findById(id);
         if(!paymentsUser) throw Error("No se encontro el pago");
         const items = paymentsUser.body. additional_info.items
       
@@ -191,7 +196,7 @@ const findPayments = async(req, res) => { //"/payments/detail"
 const getPayments = async (req, res) => {
     try {
         const { id } = req.params;
-        const findPayments = await Payment.findAll({
+        const findPayments = await Payments.findAll({
             where:{
               userId:id
             },
@@ -207,7 +212,7 @@ const getPayments = async (req, res) => {
 const deletePayment = async (req, res) => {
     try {
         const { id } = req.params;
-        const payment = await Payment.findOne({
+        const payment = await Payments.findOne({
             where:{
                 paymentId: id
             }
