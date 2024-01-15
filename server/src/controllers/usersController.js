@@ -94,6 +94,7 @@ const login = async (req, res) => {
       //    email: userFind.email,
       //    id: userFind.id,
       // };
+      console.log(userFind)
 
       return res.status(200).json(userFind);
    } catch (error) {
