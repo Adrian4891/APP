@@ -2,7 +2,7 @@ const { User } = require("../dbConexion");
 const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
-const { secretKey } = process.env;
+const secretKey  = process.env.secretKey || "claveSecretaPredeterminada"
 const { createProfile } = require("./profilesController");
 
 /* Function que verifica si el usuario o email existe */
