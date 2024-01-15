@@ -12,6 +12,7 @@ const questionsRouter = require("./routes/questionsRouter");
 const routerScore = require("./routes/scoresRouter");
 const routerNotifications = require("./routes/notificationsRouter");
 
+
 server.use(express.json());
 server.use(express.urlencoded({ extended : true }));
 server.use((req, res, next) => {
