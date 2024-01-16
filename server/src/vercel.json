@@ -12,6 +12,9 @@
             "dest": "/"
         }
     ],
+    "framework": {
+        "node": "@vercel/node"
+    },
     "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
 
     
