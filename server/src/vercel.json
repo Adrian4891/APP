@@ -12,7 +12,7 @@
             "dest": "/"
         }
     ],
-    "rewrites": [{ "source": "/server/(.*)", "destination": "/server" }]
+    "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
 
     
 }
