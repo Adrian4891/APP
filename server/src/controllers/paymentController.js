@@ -115,7 +115,7 @@ const notificationPayment = async (req, res) => {
 
             const { id } = req.body.data;
             const userId = req.params.id;
-            const paymentsUser = await payment.findById(id);
+            const paymentsUser = await Payments.findById(id);
             const items = paymentsUser.body.additional_info.items;
         
             items.forEach(async(item)=>{
@@ -167,9 +167,9 @@ const findPayments = async(req, res) => { //"/payments/detail"
     try {
 
         const { id } = req.params;
-        const paymentsUser = await payment.findById(id);
+        const paymentsUser = await Payments.findById(id);
         if(!paymentsUser) throw Error("No se encontro el pago");
-        const items = paymentsUser.body. additional_info.items
+        const items = paymentsUser.body.additional_info.items
       
        const detailtPayment = {
           metodo:paymentsUser.body.payment_method.id,
@@ -207,13 +207,13 @@ const getPayments = async (req, res) => {
 const deletePayment = async (req, res) => {
     try {
         const { id } = req.params;
-        const payment = await Payments.findOne({
+        const paymentFind = await Payments.findOne({
             where:{
                 paymentId: id
             }
         });
-        if(!payment) throw Error("El pago no fue encontrado");
-        await payment.destroy();
+        if(!paymentFind) throw Error("El pago no fue encontrado");
+        await paymentFind.destroy();
         return res.status(200).send("El pago se borro");
     } catch (error) {
         return res.status(404).send(error.message);
