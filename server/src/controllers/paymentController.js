@@ -1,10 +1,12 @@
 require("dotenv").config();
 const mercadopago = require("mercadopago");
-const MERCADOPAGO_KEY = process.env.MERCADOPAGO_KEY;
+const { MercadoPagoConfig, Payment } = require('mercadopago');
+const { MERCADOPAGO_KEY } = process.env;
 const { Payments } = require("../dbConexion");
 const { Cart } = require("../dbConexion");
 
 mercadopago.configure({access_token: MERCADOPAGO_KEY })
+
 
 const createPayment = async (req, res) =>{
     try {
@@ -73,7 +75,7 @@ const createPayment = async (req, res) =>{
             statement_descriptor: "BarekMusic",
             external_reference: "Reference_1234",    
         }
-       const response = await mercadopago.preferences.create(preference);
+       const response = await mercadopago.preferences.create(preference)
        res.status(200).json(response.body.init_point);
         
     } catch (error) {
