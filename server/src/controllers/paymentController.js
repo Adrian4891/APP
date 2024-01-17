@@ -1,12 +1,10 @@
 require("dotenv").config();
 const mercadopago = require("mercadopago");
-const { MercadoPagoConfig, Payment } = require('mercadopago');
 const { MERCADOPAGO_KEY } = process.env;
 const { Payments } = require("../dbConexion");
 const { Cart } = require("../dbConexion");
 
 mercadopago.configure({access_token: MERCADOPAGO_KEY })
-
 
 const createPayment = async (req, res) =>{
     try {
