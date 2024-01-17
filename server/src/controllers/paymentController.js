@@ -65,9 +65,9 @@ const createPayment = async (req, res) =>{
                 }
             },
             back_urls:{
-                success: "https://barekintrumentsapp-production.up.railway.app/",
-                failure:"https://barekintrumentsapp-production.up.railway.app/",
-                pending:"https://barekintrumentsapp-production.up.railway.app/"
+                success: "https://barek-intruments-app.vercel.app/",
+                failure:"https://barek-intruments-app.vercel.app/",
+                pending:"https://barek-intruments-app.vercel.app/"
             },
             auto_return: "approved",
             binary_mode: true,
