@@ -7,7 +7,6 @@ const { Cart } = require("../dbConexion");
 mercadopago.configure({
     access_token: MERCADOPAGO_KEY
 });
-
 const createPayment = async (req, res) =>{
     try {
         const { id } = req.params;
