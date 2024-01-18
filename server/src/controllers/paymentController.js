@@ -71,7 +71,7 @@ const createPayment = async (req, res) =>{
             },
             auto_return: "approved",
             binary_mode: true,
-            notification_url: `https://barekintrumentsapp-production.up.railway.app//payments/notifications/${id}`,
+            notification_url: `https://barekintrumentsapp-production.up.railway.app/payments/notifications/${id}`,
             statement_descriptor: "BarekMusic",
             external_reference: "Reference_1234",    
         }
