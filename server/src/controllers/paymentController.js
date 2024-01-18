@@ -33,7 +33,7 @@ const createPayment = async (req, res) =>{
         } else {
 
             const item = {
-                id: products[0].id,
+                id: products[0].ProductId,
                 title: products[0].name,
                 currency_id: "ARS",
                 picture_url: products[0].image,
@@ -71,7 +71,7 @@ const createPayment = async (req, res) =>{
             },
             auto_return: "approved",
             binary_mode: true,
-            notification_url: `https://barekintrumentsapp-production.up.railway.app/payments/notifications/${id}`,
+            notification_url: `https://barekintrumentsapp-production.up.railway.app//payments/notifications/${id}`,
             statement_descriptor: "BarekMusic",
             external_reference: "Reference_1234",    
         }
@@ -111,16 +111,17 @@ const pendingResponse = async (req, res) => {
 const notificationPayment = async (req, res) => {
     try {
         const type =  req.body.type;
-       if(type === "payment"){
-
+        if(type === "payment"){
+            
             const { id } = req.body.data;
             const userId = req.params.id;
-            const paymentsUser = await Payments.findById(id);
+            const paymentsUser = await mercadopago.payment.findById(id);
             const items = paymentsUser.body.additional_info.items;
-        
+            console.log(items)
             items.forEach(async(item)=>{
-                if (items.length > 1) {
-                    delProductsCart( item.id, userId);
+                if (items.length >= 1 ) {
+                    console.log(userId,item)
+                    delProductsCart(item.id, userId);
                 }
 
                 const compra = {
@@ -167,7 +168,7 @@ const findPayments = async(req, res) => { //"/payments/detail"
     try {
 
         const { id } = req.params;
-        const paymentsUser = await Payments.findById(id);
+        const paymentsUser = await mercadopago.payment.findById(id);
         if(!paymentsUser) throw Error("No se encontro el pago");
         const items = paymentsUser.body.additional_info.items
       
