@@ -30,6 +30,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getUserRoll } from './redux/actions';
 import  axios from "axios";
 axios.defaults.baseURL='https://barekintrumentsapp-production.up.railway.app/';
+
 function App() {
 
   const [categories, setCategories] = useState([]);
@@ -86,6 +87,7 @@ function App() {
     if (!token) return;
     try {
       const { data } = await axios(`/notifications/${id}`);
+      console.log(data)
       if(!data[0].id) throw error("No hay notificaciones");
       let cont = 0;
       data.forEach((dat)=>{

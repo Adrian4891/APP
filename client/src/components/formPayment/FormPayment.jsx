@@ -14,6 +14,7 @@ const FormPayment = () => {
     const dispatch = useDispatch();
     const order = useSelector(state => state.order);
     const userId = Cookies.get("userId");
+    console.log(userId)
     
     const [ userData, setUserData ] = useState({
        name:"",lastName:"",codPostal:"",state:"", city:"",street:"",number:"",betweenStreet:"",dni:"",

@@ -11,17 +11,25 @@
     justify-content: center;
     align-items: center;
     flex-direction:column;
-    height: 500px;
-    width: 325px;
-    background-color: #ffff;
+    justify-content: space-evenly;
+    height: 560px;
+    width: 375px;
+    background-color: #ffffff;
+    border:1px solid gray;
     border-radius: 5px;
-    gap: 20px;
+}
+
+.imgLogo {
+    width: 200px;
 }
 
 .containerForm h1 {
-    margin-bottom: 35px;
+    margin-bottom: 10px;
+    font-size: 25px;
     font-weight: 900px;
-    text-shadow: 1px 1px #1a1818;
+    text-align: center;
+    text-shadow: 1px 1px #4b4a4a;
+    color: #646363;
 }
 
 .containerForm form {
@@ -34,10 +42,11 @@
 
 .containerForm p {
     margin: 0;
-    font-size: 13px;
+    font-size: 12px;
     padding:  0px 10px;
     color: #ff0000;
     font-weight: 500;
+    width: 100%;
     text-align: center;
 }
 
@@ -54,7 +63,20 @@
     padding: 4px 15px;
     color: #1f1e1e;
     font-weight: 500;
-    width: 210px;
+    border-radius: 5px;
+    width: 225px;
+    outline: none;  
+    border: 1px solid gray; 
+}
+
+.contLabInp .inpFormOk:focus-visible {
+    outline: 1px solid #04d304;
+    border:none   
+}
+
+.contLabInp .inpFormError:focus-visible {
+    outline: 1px solid #e91505;
+    border:none   
 }
 
 .contButt {
@@ -68,7 +90,7 @@
 
 .contButt  p {
     font-size: 15px;
-    color: #000000;
+    color: #524f4f;
     font-weight: 500;
 }
 
@@ -84,14 +106,16 @@
 .contButt button {
     background-color: #1a1919;
     border: #1a1919 ;
-    padding: 3px 40px;
     margin-top: 15px;
-    border-radius: 2px;
-    color: #ffff;
+    border-radius: 5px;
+    color: #ffffff;
     font-size: 17px;
+    font-weight: 600;
+    padding: 4px 70px;
+    cursor: pointer;
 }
 .contButt button:hover {
-    background-color: #252424;
+    background-color: #3a3939;
     border: #504e4e ;
     transition: 700ms;
     
@@ -102,9 +126,13 @@
     color: #646161;
 }
 
-@media (max-width: 320px){
+@media (max-width: 768px){
+    .containerLogin {
+        background-color: #ffffff;
+    }
+
     .containerForm {
-        width: 317px;
+        border:none;
     }
 
 }

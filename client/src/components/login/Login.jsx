@@ -6,6 +6,9 @@ import React,{ useState } from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { BsEyeSlashFill, BsEyeSlash } from "react-icons/bs";
+import logoPage from "../../images/logoPage.svg";
+import { IoEyeSharp } from "react-icons/io5";
+
 
 const Login = ({login}) => {
 
@@ -48,7 +51,14 @@ const Login = ({login}) => {
     return (
         <div className={style.containerLogin}>
             <div className={style.containerForm}>
-                <h1>Ingresa</h1>
+                <div>
+                    <h1>Sign In </h1>
+                    <img 
+                    src={logoPage} 
+                    alt="logo" 
+                    className={style.imgLogo}
+                    />
+                </div>
                 { message && <p>{message}</p>}
                 <form onSubmit={handleSubmit}>
                     <div className={style.contLabInp}>
@@ -59,7 +69,8 @@ const Login = ({login}) => {
                           placeholder="ejemplo@gmail.com" 
                           value={userData.email}
                           onChange={handleEventForm}
-                        />
+                          className={errors.email ? style.inpFormError : style.inpFormOk }
+                          />
                     </div>
                     {errors.email && <p>{errors.email}</p>}
                     <div className={style.contLabInp}>
@@ -70,9 +81,11 @@ const Login = ({login}) => {
                         placeholder="password" 
                         value={userData.password}
                         onChange={handleEventForm}
+                        className={errors.password ? style.inpFormError :  style.inpFormOk}
+
                         />
                         {!hiden ? <BsEyeSlash onClick={()=>setHiden(true)} className={style.iconLog}/> 
-                        :<BsEyeSlashFill onClick={()=>setHiden(false)} className={style.iconLog}/>
+                        :<IoEyeSharp onClick={()=>setHiden(false)} className={style.iconLog}/>
                         }
                     </div>
                     {errors.password && <p>{errors.password}</p>}
@@ -80,7 +93,7 @@ const Login = ({login}) => {
                         <button 
                         disabled={Object.entries(errors).length ? true : false} 
                         >Login</button>
-                        <p>No tienes cuenta? <Link to="/signUp">Registrate</Link></p>
+                        <p>No tienes cuenta? <Link to="/signUp">Sign up</Link></p>
                     </div> 
                 </form>
             </div>

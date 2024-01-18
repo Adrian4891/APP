@@ -1,7 +1,7 @@
 export const validateSignUp =  (userData) => {
   const errors = {};
   if(!/^[a-z0-9_-]{5,10}$/.test(userData.userName)){
-    errors.userName = "Entre 6 y 10 de longitud, sin caracteres especiales, en minuscula"
+    errors.userName = "En minuscula, sin caracteres especiales 6 y 10 de longitud"
   }
   else if(!/^[a-zA-Z0-9._-]{1,35}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(userData.email)){
     errors.email = "Debe ser un email valido"
@@ -15,7 +15,7 @@ export const validateSignUp =  (userData) => {
 export const validateLogin = (userData) => {
   const errors = {};
   if(!/^[a-zA-Z0-9._-]{1,35}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(userData.email)){
-    errors.email = "El userName longitud entre 6 y 10  o un email valido";
+    errors.email = "Debe contener un formato de email";
   }
   else if (!/^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9]{6,20}$/.test(userData.password)){
     errors.password = "Contiene entre 6 y 20 caracteres y al menos un numero";
