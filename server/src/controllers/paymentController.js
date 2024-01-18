@@ -117,10 +117,8 @@ const notificationPayment = async (req, res) => {
             const userId = req.params.id;
             const paymentsUser = await mercadopago.payment.findById(id);
             const items = paymentsUser.body.additional_info.items;
-            console.log(items)
             items.forEach(async(item)=>{
                 if (items.length >= 1 ) {
-                    console.log(userId,item)
                     delProductsCart(item.id, userId);
                 }
 
