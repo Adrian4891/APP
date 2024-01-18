@@ -1,5 +1,6 @@
 const { Score, Product, Payments } =  require("../dbConexion");
 
+
 const scoreProduct = async (req, res) => {
   try {
     const { id } = req.params;
