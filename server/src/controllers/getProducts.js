@@ -103,6 +103,7 @@ const getProductCategory = async (req, res) => {
     }
 }
 
+
 module.exports = {
     getAllProducts,
     getProductsPages,

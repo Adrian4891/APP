@@ -4,7 +4,6 @@ const { Score, Product, Payments } =  require("../dbConexion");
 const scoreProduct = async (req, res) => {
   try {
     const { id } = req.params;
-    console.log(id)
     const { score, coment, userId } = req.body;
     if(!userId || !id) throw Error("Faltan los parametro para la busqueda del producto");
     if(!score) throw Error("Puntuation no puede estar vacio");

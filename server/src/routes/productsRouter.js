@@ -5,7 +5,7 @@ const {
     seachProduct, 
     getProductById, 
     deleteProduct,
-    getProductCategory
+    getProductCategory,
 } = require("../controllers/getProducts");
 
 const {productPost  } = require("../controllers/postProducts");
@@ -23,6 +23,8 @@ router.get("/:id",  getProductById);
 router.delete("/delete/:id", deleteProduct);
 
 router.post("/", productPost);
+
+
 
 
 

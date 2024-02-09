@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME } = process.env;
+const { POSTGRESQL_URL } = process.env;
 const { Sequelize } = require("sequelize");
 const userModel = require("./models/User");
 const productModel = require("./models/Product");
@@ -13,8 +13,7 @@ const userQuestions  = require("./models/Questions");
 const scoreModel = require("./models/Scores");
 const notificationModel = require("./models/Notification");
 
-const dataBase = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`, 
-{logging:false, native: false, dialect: "postgres"});
+const dataBase = new Sequelize(POSTGRESQL_URL,{logging:false, native: false, dialect: "postgres"});
 
 dataBase.authenticate().then(()=>{
     console.log("DB, Connected");
