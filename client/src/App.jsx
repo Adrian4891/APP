@@ -174,7 +174,7 @@ function App() {
        handleLoader={handleLoader}
       />
       <Routes>
-        <Route path="/" element={<Home load={load} handleLoader={handleLoader}/>}/>
+        <Route path="/" element={<Home load={load} handleLoader={handleLoader} products={products}/>}/>
         <Route path="/signUp" element={ <SignUp signUp={signUp}/> } />
         <Route path="/login" element={ <Login login={login}/> }/>
         <Route path="/profile" element={<Profile load={load} handleLoader={handleLoader}/>}/>
