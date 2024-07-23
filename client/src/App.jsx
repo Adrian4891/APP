@@ -29,7 +29,7 @@ import { useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 import { getUserRoll } from './redux/actions';
 import  axios from "axios";
-axios.defaults.baseURL='https://barekappserver.onrender.com';
+axios.defaults.baseURL='http://localhost:3001';
 
 function App() {
 
